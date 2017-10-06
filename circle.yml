@@ -6,6 +6,8 @@ machine:
 dependencies:
   pre:
     - ./scripts/install-dependencies.sh
+    - git lfs fetch
+    - git lfs checkout
   override:
     - npm install
     - ./scripts/docker-build-images.sh
